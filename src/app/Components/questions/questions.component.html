@@ -1,0 +1,31 @@
+<div class="questions-main">
+  <div class="question-container">
+    <div class="questions-content">
+      <div class="headings">
+        <p><strong style="color: #333333; font-weight: 700;">Frequently Asked Questions</strong></p>
+        <p style="color: #777777; font-weight: 600;">
+          If you have additional questions don’t hesitate to contact our support
+          team. We’re here to help you find your spot!
+        </p>
+      </div>
+      <div class="image">
+        <img src="../../../assets/questionsimage.svg" alt="no image" />
+      </div>
+    </div>
+    <div class="questions-answers">
+      <div class="card" *ngFor="let faq of faqs; let i = index">
+        <details [open]="faq.isOpen" (toggle)="toggleFaq(i)">
+          <summary>
+            {{ faq.question }}
+            <span>
+              <img 
+                [src]="faq.isOpen ? '../../../assets/Minus.svg' : '../../../assets/plus.svg'" 
+                alt="icon image" />
+            </span>
+          </summary>
+          <p>{{ faq.answer }}</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>

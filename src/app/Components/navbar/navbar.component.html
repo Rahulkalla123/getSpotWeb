@@ -1,0 +1,33 @@
+<div class="navstyling-line">
+  <img src="../../../assets/Vector1269.svg" alt="no line" />
+</div>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="../../../assets/getspotlogo1.svg" alt="logo missing" />
+    <h4>getspot</h4>
+  </div>
+
+  <div class="menu-toggle" (click)="toggleMenu()" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links" [ngClass]="{ active: isMenuOpen }">
+    <li><a routerLink="/" fragment="key-features" (click)="closeMenu()">The Features</a></li>
+    <li><a routerLink="/" fragment="working" (click)="closeMenu()">How It Works</a></li>
+    <li><a routerLink="/" fragment="benefits" (click)="closeMenu()">Benefits</a></li>
+    <li><a routerLink="/" fragment="questions" (click)="closeMenu()">FAQ</a></li>
+    <li><a routerLink="/" fragment="Testimonials" (click)="closeMenu()">Testimonials</a></li>
+  </ul>
+
+  <div class="auth-buttons" *ngIf="!isMobileView">
+    <button class="login">Log in</button>
+    <button class="signup">
+      Sign Up
+      <img src="../../../assets/send-sqaure.svg" alt="no image" />
+    </button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

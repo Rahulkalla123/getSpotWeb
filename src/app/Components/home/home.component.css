@@ -1,0 +1,88 @@
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.nav-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.styleline {
+  position: absolute;
+  top: 610px;
+}
+.curveimage {
+  position: absolute;
+  right: 0;
+  top: 610px;
+}
+.backgroundImage{
+  position: absolute;
+    width: 100%;
+    height: 93vh;
+    z-index: 2;
+    
+}
+.backgroundImage img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.testimonialsFotter {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media (max-width: 768px) {
+  .curveimage {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .curveimage {
+    position: relative;
+    top: 0;
+    img {
+      position: absolute;
+    top: -150px;
+    right: 0;
+    width: 120px;
+    }
+  } 
+}
+
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .curveimage {
+    position: relative;
+    top: 0;
+  img {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 250px;
+  }
+}
+}
+
+
+
+@media (min-width: 2560px) {
+  .curveimage{
+    position: relative;
+    top: 0;
+
+   img {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: -200px;
+  }
+}
+.testimonialsFotter {
+  gap: 15rem;
+}
+}

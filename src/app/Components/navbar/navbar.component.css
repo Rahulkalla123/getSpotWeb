@@ -1,0 +1,218 @@
+.navstyling-line {
+  text-align: end;
+}
+
+.navstyling-line img {
+  width: 80%;
+  height: 6vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 140px;
+  position: relative;
+  z-index: 1000;
+  height: 10vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links :hover {
+  text-decoration: underline;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: small;
+  font-weight: 500;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+  border: none;
+  cursor: pointer;
+}
+
+.auth-buttons .login {
+  background: transparent;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #000;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fbc02d;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: #000;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .auth-buttons .signup {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo h4 {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .navstyling-line img {
+    width: 80%;
+    height: 2vh;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .auth-buttons {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .navbar {
+    padding: 10px 200px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 100px;
+  }
+.logo h4 {
+  font-size: 2rem;
+}
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-links a {
+    font-size: 1.7rem;
+  }
+
+  .auth-buttons {
+    gap: 30px;
+  }
+
+  .auth-buttons .signup {
+    padding: 15px 20px;
+    font-size: 2rem;
+    border-radius: 16px;
+  }
+  .auth-buttons .login {
+    font-size: 2rem;
+  }
+
+  .auth-buttons img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+  }
+
+  .navstyling-line img {
+    width: 90%;
+    height: 8vh;
+  }
+}
